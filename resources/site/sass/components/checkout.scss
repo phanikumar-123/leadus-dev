@@ -1,0 +1,65 @@
+.checkout {
+    &__form {
+        max-width: 440px;
+        margin: 0 auto;
+
+        .accepted-cards {
+            .title {
+                font-weight: 700;
+                font-size: 23px;
+            }
+            .icon-container {
+                font-size: 30px;
+            }
+        }
+
+        .form-field {
+            font-size: 16px;
+        }
+        .checkout-btn-wrapper {
+            .btn {
+                width: 100%;
+                background-color: $indigo;
+                border-color: $indigo;
+                min-height: 48px;
+            }
+        }
+        .form-text {
+            font-size: 13px;
+            color: #828282;
+        }
+        .form-check {
+            padding-left: 2rem;
+            input[type="checkbox"] {
+                display: none;
+            }
+            label {
+                font-size: 16px;
+                &::before {
+                    content: "";
+                    border: 1px solid;
+                    width: 25px;
+                    display: block;
+                    height: 25px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            .checked {
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    left: 4px;
+                    height: 8px;
+                    width: 16px;
+                    color: #0071eb;
+                    content: "";
+                    border-bottom: 4px solid;
+                    border-left: 4px solid;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

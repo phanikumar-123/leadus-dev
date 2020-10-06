@@ -1,0 +1,32 @@
+.category-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+    &__category-wrapper {
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__image-wrapper {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #4A3173;
+        img {
+            object-fit: contain;
+        }
+    }
+
+    &__category-title {
+        text-align: center;
+        text-decoration: none;
+        color: $black;
+    }
+}

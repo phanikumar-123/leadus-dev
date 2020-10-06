@@ -1,0 +1,108 @@
+.question-comp {
+    height: 100%;
+    width: 60%;
+    margin-left: 10px;
+    position: relative;
+
+
+    &__window-wrapper {
+        margin-top: 10px;
+        overflow-y: auto;
+        height: calc(100% - 50px);
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        border-bottom: 1px solid;
+        margin-bottom: 8px;
+    }
+
+    &__options-wrapper {
+        margin-left: 10px;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__option {
+        span {
+            padding-top: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .option-pill {
+            background-color: $bgGrey;
+            width: 300px;
+            margin-bottom: 15px;
+            padding: 5px 8px;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 1px solid $bgGrey;
+
+            &:hover {
+                border: 1px solid $hover-light-purple;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            &.active {
+                background-color: $brand-color;
+                border-color: $brand-color;
+                color: $white;
+            }
+
+            &.correct {
+                background-color: $green;
+                border-color: $green;
+                color: $white;
+            }
+
+            &.in-correct {
+                background-color: $bootstrap-red;
+                border-color: $bootstrap-red;
+                color: $white;
+            }
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $bgGrey;
+        padding: 10px 5px;
+        z-index: 5;
+        height: 50px;
+
+        .question-nav {
+            button {
+                width: 100px;
+                font-size: 15px;
+                text-align: center;
+
+                i {
+                    font-size: 15px;
+                }
+                &:first-of-type {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .review-ans-wrapper {
+            button {
+                background-color: $hover-light-purple;
+                border-color: $hover-light-purple;
+
+                &:hover {
+                    background-color: lighten($hover-light-purple, 10);
+                }
+            }
+        }
+    }
+}

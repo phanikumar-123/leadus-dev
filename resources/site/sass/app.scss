@@ -1,0 +1,34 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Roboto|Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import './fonts/flaticon';
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Global level scss
+@import 'mixins';
+@import 'global';
+
+@import "components/header.scss";
+@import "../../commons/scss/components/footer.scss";
+@import "components/userForm";
+@import "components/login";
+@import "components/signUp";
+@import "components/plans";
+
+.wrapper {
+    display: flex;
+    height: 80vh;
+}
+
+@import "./components/sidenav.scss";
+@import "./components/categorySelector.scss";
+@import "./components/questionComponent.scss";
+@import "./components/questionsRail.scss";
+
+//@import "components/checkout.scss";

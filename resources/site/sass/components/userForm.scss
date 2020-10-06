@@ -1,0 +1,133 @@
+.user-form-bg {
+    background-color: $bgGrey;
+    //background-image: url('/images/blur-book-stack-books-bookshelves-590493.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.user-form {
+    background-color: $white;
+    //border-left: 5px solid $brand-color;
+    //margin: 99px auto;
+    min-height: 450px;
+    padding: 25px;
+    position: relative;
+    border-radius: 10px;
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    &.slide-top {
+        @keyframes slide-top {
+            from {bottom: 100%;}
+            to {bottom: 0;}
+        }
+        animation-name: slide-top;
+        animation-duration: 1.5s;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance:textfield;
+    }
+    &:hover {
+        box-shadow: none;
+        transition: box-shadow 0.7s ease;
+    }
+    &:not(:hover) {
+        transition: box-shadow 1s ease;
+    }
+
+    button[type="submit"] {
+        &:hover {
+            background-color: $btn-hover;
+            transition: 0.3s background-color;
+        }
+    }
+    h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        text-align: center;
+        color: $brand-color;
+        font-weight: 600;
+        font-family: 'Indie Flower', cursive;
+        font-size: 60px;
+    }
+    .password-row {
+        position: relative;
+    }
+    input.invalid {
+        border: 1px solid $red;
+    }
+    .email-field, .password-field, .remember-me-check {
+        position: relative;
+    }
+    .forgot-password {
+        display: flex;
+        justify-content: flex-end;
+        a {
+            font-weight: 600;
+        }
+    }
+
+    .sign-in-btn, .sign-up-btn, .update-profile {
+        background-color: $btn-yellow;
+        border: none;
+        color: $btn-text;
+        font-size: 18px;
+        border-radius: 25px;
+        @include padding-horizontal(25px);
+    }
+    .email-error, .pwd-error, .name-error, .sign-up-email-error, .sign-up-pwd-error, .confirm-pwd-error, .update-name-error, .phone-error, .sign-up-phone-error {
+        position: absolute;
+        top: 45px;
+        font-size: 11px;
+        color: $red;
+    }
+    .sign-up-pwd-error, .confirm-pwd-error {
+        padding-left: 5px;
+    }
+    .form-field {
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .form-field:focus {
+        border-color: $indigo;
+        box-shadow: none;
+    }
+
+    .field-label {
+        color: $dark-grey;
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+        top: 9px;
+        transition: 0.2s ease all;
+    }
+
+    .transform-label {
+        background-color: $white;
+        color: $indigo;
+        height: 12px;
+        padding: 0 4px;
+        top: -7px;
+        bottom: 10px;
+        left: 20px;
+        font-size: 11px;
+        opacity: 1;
+        z-index: 9;
+    }
+}

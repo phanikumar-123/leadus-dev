@@ -1,0 +1,45 @@
+.question-rail {
+    width: 20%;
+    background-color: #f0f0f3;
+    padding: 1rem 0.7rem;
+    overflow-y: auto;
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    &__title {
+        border-bottom: 1px solid $light-border;
+        margin-bottom: 12px;
+
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__question-box {
+        background-color: #bbb;
+        width: 42px;
+        padding: 5px;
+        color: #fff;
+        border-radius: 16%;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        margin-right: 8px;
+        text-align: center;
+
+        &.active {
+            background-color: $hover-light-purple;
+        }
+
+        &:hover {
+            background-color: $hover-purple;
+            color: $white;
+        }
+    }
+}

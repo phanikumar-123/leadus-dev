@@ -1,0 +1,23 @@
+.fullwidth-block{
+	padding: 50px 0;
+
+	.section-title{
+		@include em(48);
+		color: $accent-color;
+		text-align: center;
+	}
+	.section-intro{
+		text-align: center;
+		@include em(18);
+		color: #aea1c3;
+		margin-bottom: 30px;
+	}
+
+	&[data-bg-image],&[data-bg-color]{
+		.section-title{color: white}
+	}
+	h3.section-title{
+		text-align: left;
+		@include em(40);
+	}
+}

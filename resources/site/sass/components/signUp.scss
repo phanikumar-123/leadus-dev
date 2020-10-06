@@ -1,0 +1,275 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-up(sm) {
+        height: 100vh;
+    }
+    .sign-up {
+        width: 800px;
+        overflow-x: hidden;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
+        h1 {
+            text-align: left;
+            @include media-breakpoint-down(lg) {
+                text-align: center;
+            }
+        }
+
+        .first-name {
+            padding-right: 15px;
+        }
+
+        .last-name, .update-first-name, .update-last-name {
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .form-section {
+            min-width: auto;
+            width: 400px;
+            @include media-breakpoint-down(xs) {
+                margin-top: 30px;
+                order: 2;
+            }
+        }
+
+        .form-section, .avatar-section {
+            display: inline-block;
+        }
+
+        .sign-in-link {
+            text-align: right;
+            a {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        .avatar-section {
+            margin: 0 70px;
+            position: relative;
+            vertical-align: top;
+
+            p {
+                color: $brand-color;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 auto;
+            }
+            @include media-breakpoint-down(xs) {
+                order: 1;
+            }
+        }
+
+        .sign-up-btns {
+            display: flex;
+            //align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .sign-up-btn-wrapper {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+
+        .password-toggle {
+            padding: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+
+        .sign-up-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .sign-up-btn, .update-profile {
+            font-size: 16px;
+        }
+
+        .profile-cirle {
+            border: 2px solid $indigo;
+            border-radius: 50%;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+            width: 150px;
+            @include media-breakpoint-down(sm) {
+                height: 130px;
+                width: 130px;
+            }
+
+            .profile-pic-overlay {
+                display: flex;
+                color: $indigo;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 20px;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            img {
+                border-radius: 50%;
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .p-image {
+            position: absolute;
+            top: 111px;
+            right: 8px;
+            color: $indigo;
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+        }
+
+        .p-image:hover {
+            cursor: pointer;
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+        }
+
+        .upload-button {
+            font-size: 1.2em;
+        }
+
+        .upload-button:hover {
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            color: #999;
+        }
+
+        .file-upload {
+            display: none;
+        }
+
+        .terms-condition-text {
+            display: inline-flex;
+            align-items: center;
+            font-size: 12px;
+            position: relative;
+            width: 100%;
+
+            span {
+                padding-left: 10px;
+            }
+        }
+
+        .checkbox-error {
+            font-size: 11px;
+            color: $red;
+            position: absolute;
+            top: 26px;
+            left: 5px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .form-one {
+            position: relative;
+
+            &.slide-right {
+                animation-name: slide-one-rt;
+                animation-duration: 1s;
+                right: 0;
+            }
+            @keyframes slide-one-rt {
+                from {right: 0;}
+                to {right: 100%;}
+            }
+        }
+
+        .form-two {
+            position: relative;
+            .logo {
+                text-align: center;
+            }
+            .title {
+                font-weight: bold;
+                font-size: 30px;
+                color: #212529;
+            }
+            .sub-title {
+                font-size: 19px;
+            }
+            #email-id {
+                font-weight: bold;
+            }
+            .otp-group {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 40px;
+                    height: 50px;
+                    background-color: #dddee0;
+                    border: none;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 200;
+                    color: $btn-text    ;
+                    margin: 0 5px;
+                    border-radius: 4px;
+                }
+            }
+            .otp-timer-wrapper {
+                display: flex;
+                //  align-items: center;
+                justify-content: center;
+                .timer {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+                a {
+                    font-weight: 600;
+                    height: 22px;
+                    margin-bottom: 1rem;
+                }
+            }
+            .sign-up-btn-wrapper {
+                .back-btn {
+                    margin-right: 30px;
+                    border-radius: 25px;
+                    width: 100px;
+                    background-color: $brand-color;
+                    border: none;
+                    &:hover {
+                        background-color: lighten($brand-color, 15%);
+                    }
+                }
+            }
+        }
+    }
+}

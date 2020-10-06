@@ -1,0 +1,39 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .login {
+        width: 500px;
+        padding: 50px;
+        &:not(:hover) {
+            .border-corner {
+                opacity: 0;
+                transition: opacity 0.7s ease;
+            }
+        }
+        .sign-up-link {
+            a {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .submit-btn-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .remember-me-check {
+            .form-check-label {
+                cursor: pointer;
+            }
+        }
+    }
+}

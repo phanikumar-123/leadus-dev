@@ -1,0 +1,92 @@
+@keyframes onAutoFillStart {  from {/**/}  to {/**/}}
+@keyframes onAutoFillCancel {  from {/**/}  to {/**/}}
+
+input:-webkit-autofill {
+  animation-name: onAutoFillStart;
+}
+
+input:not(:-webkit-autofill) {
+  animation-name: onAutoFillCancel;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .spinner {
+    width: 105px;
+    margin: 0 auto;
+  }
+
+  p {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  p:before {
+    position: relative;
+    top: 0px;
+    content: attr(title);
+    color: #aaa;
+  }
+}
+
+.full-page {
+    min-height: 78vh;
+}
+
+.animated-label-field {
+    .form-group {
+        position: relative;
+        height: 60px;
+
+        .form-field {
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding: 10px;
+            height: 60px;
+        }
+
+        .form-field:focus {
+            border-color: $indigo;
+            box-shadow: none;
+        }
+
+        .field-label {
+            color: $dark-grey;
+            position: absolute;
+            pointer-events: none;
+            left: 20px;
+            top: 50%;
+            transition: 0.2s ease all;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .transform-label {
+            background-color: $white;
+            color: $indigo;
+            height: 12px;
+            padding: 0 4px;
+            top: -7px;
+            bottom: 10px;
+            left: 20px;
+            font-size: 11px;
+            opacity: 1;
+            z-index: 9;
+            transform: none;
+        }
+    }
+}

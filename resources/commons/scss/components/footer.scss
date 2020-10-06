@@ -1,0 +1,65 @@
+.footer {
+    color: $gray-text;
+    border-top: 1px solid $light-border;
+    padding: 18px 50px;
+    height: 10vh;
+    a {
+        color: $gray-text;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    &__top {
+        font-size: 1rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+            flex-direction: column;
+        }
+        .links {
+            padding: 0;
+            margin-bottom: 10px;
+            li {
+                display: inline-block;
+                margin-right: 60px;
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                    &::after {
+                        content: " | ";
+                    }
+                    &:last-child::after {
+                        content: "";
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &__bottom {
+        font-size: 0.8rem;
+        text-align: center;
+        @include media-breakpoint-down(sm) {
+            font-size: 10px;
+        }
+    }
+}
+
+.plans-page .footer {
+    @include media-breakpoint-up(sm) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

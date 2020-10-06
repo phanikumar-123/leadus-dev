@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include padding-horizontal(25px);
+    border-bottom: 1px solid $light-border;
+    height: 10vh;
+    &__logo {
+        &:hover {
+            text-decoration: none;
+        }
+        h1 {
+            color: $brand-color;
+            font-weight: 600;
+            font-family: "Indie Flower", cursive;
+            font-size: 60px;
+            @include media-breakpoint-down(sm) {
+                font-size: 40px;
+            }
+        }
+    }
+    &__authlinks {
+        .logout-btn {
+            color: #333;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 90px;
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

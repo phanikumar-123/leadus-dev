@@ -1,0 +1,18 @@
+// Font family
+$primary-font      : "Belgrano", "Roboto Slab", sans-serif;
+
+
+// Color Variables
+$accent-color      : #4a3173;
+$primary-color     : $accent-color;
+$secondary-color   : #ecb540;
+
+$strong-color      : $accent-color;
+$body-color        : #918b9b;
+
+$gray-text: #757575;
+$light-border: #e6e6e6;
+
+// Grid system
+$grid-columns      : 12 !default;
+$grid-gutter-width : 30px !default;

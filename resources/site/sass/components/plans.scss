@@ -1,0 +1,138 @@
+.subscription-plans {
+    padding: 10px;
+
+    .logo {
+        text-align: center;
+        color: $brand-color;
+        font-weight: 600;
+        font-family: "Indie Flower", cursive;
+        font-size: 60px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.085rem;
+    }
+
+    .plans {
+        display: flex;
+        justify-content: center;
+        .row {
+            margin: 0;
+        }
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            .row {
+                justify-content: center;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .row {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .card {
+            margin: 0 0.65rem;
+            position: relative;
+            width: 300px;
+            border: none;
+            transition: box-shadow 1s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            min-height: 250px;
+
+            &:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .check {
+                position: absolute;
+                top: 8px;
+                right: 11px;
+                display: none;
+
+                i {
+                    font-size: 30px;
+                    color: indigo;
+                }
+            }
+
+            .card-subtitle {
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+
+            .card-title {
+                font-weight: bold;
+                font-size: 3.3rem;
+            }
+
+            .card-text {
+                font-weight: 400;
+                font-size: 1.2rem;
+                display: flex;
+
+                p {
+                    margin-right: 0.4rem;
+                }
+
+                .original-price {
+                    text-decoration: line-through;
+                    margin-bottom: 0;
+                    font-size: 1.1rem;
+                }
+            }
+
+            &.active {
+                border: 2px solid $indigo;
+                border-radius: 10px;
+
+                .check {
+                    display: block;
+                }
+
+                .card-body {
+                    color: $indigo;
+
+                    .card-subtitle {
+                        color: #6e4e86 !important;
+                    }
+
+                    .card-text {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .submit-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            border-radius: 25px;
+            background-color: $indigo;
+            border-color: $indigo;
+            cursor: pointer;
+            font-size: 18px;
+            min-width: 150px;
+            &:hover {
+                background-color: lighten($indigo, 6%);
+                border-color: lighten($indigo, 6%);
+            }
+            &:not(:disabled):not(.disabled):active {
+                background-color: $indigo;
+                border-color: $indigo;
+            }
+        }
+    }
+}

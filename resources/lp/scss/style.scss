@@ -1,0 +1,16 @@
+/*===========================================
+ * Importing CSS Libraries
+ *===========================================*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import
+    "libs/settings",
+    "libs/mixins",
+    "libs/global",
+    "libs/components",
+    "layout/header",
+    "layout/content",
+    "../../commons/scss/components/footer.scss";

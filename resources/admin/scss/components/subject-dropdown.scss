@@ -1,0 +1,12 @@
+.prelims-subject-topic-form {
+    @include media-breakpoint-up(md) {
+        .form-control {
+            width: 60%;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .form-control {
+            width: 30%;
+        }
+    }
+}

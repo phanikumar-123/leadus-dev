@@ -1,0 +1,19 @@
+.mcq-table {
+    .options-col {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .fa-trash {
+            color: $red;
+        }
+
+        .fa-trash {
+            color: $red;
+        }
+
+        .fa-edit {
+            color: $green;
+        }
+    }
+}
